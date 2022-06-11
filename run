@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+cc -o exe $@
+./exe
+result=$?
+rm exe
+exit $result
