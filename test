@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+cc -Dtest=true -o test_exe CuTest.c $@ 
+./test_exe
+result=$?
+rm test_exe
+exit $result
