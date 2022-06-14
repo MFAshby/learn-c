@@ -16,13 +16,11 @@ int main(void) {
     } else if (l<minline) {
       buf[l]=c;
       l++;
-    } else if (l==minline) {
-      for (int i=0;i<minline;i++)
-        putchar(buf[i]);
-      putchar (c);
-      l++;
     } else {
-      putchar(c);
+      if (l==minline) 
+        for (int i=0;i<minline;i++)
+          putchar(buf[i]);
+      putchar (c);
       l++;
     }
   }
